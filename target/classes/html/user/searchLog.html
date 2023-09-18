@@ -1,0 +1,93 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>搜索记录</title>
+<link type="text/css" rel="stylesheet" th:href="@{/css/page.css}"/>
+<script type="text/javascript" th:src="@{/js/jquery/jquery-3.3.1.js}"></script>
+<!-- mmGrid -->
+<link rel="stylesheet" type="text/css" th:href="@{/plug/mmGrid/mmGrid.css}"/>
+<script type="text/javascript"  th:src="@{/plug/mmGrid/mmGrid.js}" ></script>
+<!-- mmGrid page -->
+<link rel="stylesheet" type="text/css" th:href="@{/plug/mmGrid/mmPaginator.css}"/>
+<script type="text/javascript" th:src="@{/plug/mmGrid/mmPaginator.js}" ></script>
+
+<!-- layer -->
+<link type="text/css" rel="stylesheet" th:href="@{/plug/layui/css/layui.css}"  media="all"/>
+<script type="text/javascript" th:src="@{/plug/layui/layui.js}"  charset="utf-8"></script>
+
+<link type="text/css" rel="stylesheet" th:href="@{/js/layer/skin/layer.css}"/>
+<script type="text/javascript" th:src="@{/js/layer/layer.js}" ></script>
+<style type="text/css">
+</style>
+
+</head>
+<body>
+<div  lay-allowclose="true" style="margin-left:15px; width: 98%">
+<div class="first_div" style="border:none;">
+	<table class="param_table" style="margin-left:10px;" >
+		<tr>
+			<td style="width:150px;">
+				<span>内容：</span>
+				<input type="text" id="content" name="content" class="input_0" />
+			</td>
+			<td style="">
+			<div class="layui-btn-group">
+			  <button class="layui-btn" onclick="search()">查询</button>
+			</div>
+			</td>
+		</tr>
+	</table>
+	
+	<div style="margin:3px 10px 10px 10px;"></div>
+	<div id="exampleTableUser" style="margin-top:5px;" ></div>
+	<div id="paginator11-1" align="right" style="margin-right:10px;" ></div>
+</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+
+$(function(){	
+	//表格
+	$('#exampleTableUser').mmGrid({
+    	root:'rows',// 和后台数据保存列一致,对应MMGridPageVoBean rows
+		url:"/user/search/getAllByLimit",
+    	width: 'auto',
+    	height: 'auto',
+    	//checkCol: true,
+    	fullWidthRows: true, //表格第一次加载数据时列伸展，自动充满表格
+    	showBackboard: false,
+        //multiSelect: true,
+        indexCol: true,  //索引列
+        params:function(){
+        	var param = new Object();
+        	param.content = $.trim($("#content").val());
+        	return param;
+        },
+        cols: [{title: 'ID', name: 'id', width:60, hidden:true},
+			   {title: '内容', name: 'content', width:40},
+			   {title: '搜索次数', name: 'viewCount', width:40},
+			   {title: '搜索时间', name: 'createTime', width:30}
+           ],
+        plugins : [
+        	$('#paginator11-1').mmPaginator({
+        		totalCountName: 'total',    //对应MMGridPageVoBean count
+        		page: 1,                    //初始页
+        		pageParamName: 'page',      //当前页数
+        		limitParamName: 'limit', //每页数量
+        		limitList: [10, 20, 30, 50]
+        	})
+        ]
+    });
+});
+
+//查询
+function search(){
+	$('#exampleTableUser').mmGrid().load({"page":1});
+}
+
+</script>

@@ -1,0 +1,285 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>修改个人信息</title>
+<link type="text/css" rel="stylesheet" th:href="@{/css/page.css}" />
+<script type="text/javascript" th:src="@{/js/jquery/jquery-3.3.1.js}" ></script>
+<!-- validation -->
+<script type="text/javascript" th:src="@{/js/jquery/jquery.validate.js}" ></script>
+<!-- layer -->
+<link type="text/css" rel="stylesheet" th:href="@{/plug/layui/css/layui.css}" />
+<script type="text/javascript" th:src="@{/plug/layui/layui.js}"  charset="utf-8"></script>
+
+<link type="text/css" rel="stylesheet" th:href="@{/js/layer/skin/layer.css}"/>
+
+<style type="text/css">
+
+.need_span{
+	color: red;
+	display: none;
+}
+.need_0, .validation_span{
+	color: red;
+}
+.need_1{
+	color: #666666;
+}
+.input_0{
+	width: 200px;
+}
+.form_table td{
+	padding: 5px;
+}
+.text_ad_0{
+	font-weight: bold;
+	color: #444444;
+	white-space: nowrap;
+}
+</style>
+
+<script type="text/javascript"  th:inline="javascript">
+	//引入新的插件
+	layui.config({
+		base: '../js/layer/'//拓展模块的根目录
+	}).extend({
+		pca: 'pca'
+	});
+
+	var manageUser = [[${manageUser}]];
+
+
+function getTime(val){
+	if(val){		
+		val = val.split("T");
+		return val[0]; 
+	}
+	return "";
+}
+
+console.log(manageUser);
+console.log(manageUser.province);
+console.log(manageUser.city);
+console.log(manageUser.area);
+	//使用自定义的插件pca
+	layui.use(['form', 'layedit', 'laydate', 'upload', "jquery", "pca"], function () {
+		var $ = layui.$
+				, form = layui.form
+				, pca = layui.pca;
+		if (!manageUser.city){
+			//带初始值进行初始化
+			pca.init('select[name=P1]', 'select[name=C1]', 'select[name=A1]', '江苏', '徐州', '云龙区');
+		}else{
+			pca.init('select[name=P1]', 'select[name=C1]', 'select[name=A1]', manageUser.province, manageUser.city, manageUser.area);
+		}
+		//输入提示
+		$("#address").bind('input propertychange', function () {
+					var address = document.getElementById("address").value;
+					if (address == "") {
+						document.getElementById("addressTip").style.display = "none";
+						return;
+					}
+					var html = '';
+					var province = document.getElementById("province").value;
+					if (province == "全部") {
+						province = '';
+					}
+					var city = document.getElementById("city").value;
+					if (city == "全部") {
+						city = '';
+					}
+					var area = document.getElementById("area").value;
+					if (area == "全部") {
+						area = '';
+					}
+					//查询关键字
+					var keywords = province + city + area + address;
+				}
+		);
+
+	});
+
+
+	$(function(){
+   	if(manageUser){
+   		//修改
+   		$(".top_page_name").text("修改个人信息");
+   		//回填值
+   		$("#id").val(manageUser.id);
+   		$("#name").val(manageUser.name);
+   		$("#phone").val(manageUser.phone);
+   		$("#email").val(manageUser.email);
+   		$("#address").val(manageUser.address);
+   	}
+	
+	//返回按钮
+	$("#backBtu").click(function(){
+		layer.confirm('确认返回吗？', {icon: 3, title:'提示'}, function(index){
+		    parent.layer.closeAll();
+		});
+	});
+});
+
+function closeSelf(){
+    var i = layer.getFrameIndex();
+	layer.close(i);
+}
+
+//保存
+function save(){
+	var param = new Object();
+	param.name = $.trim($("#name").val());
+	param.phone = $.trim($("#phone").val());
+	param.email = $.trim($("#email").val());
+	param.city = $.trim($("#city").val());
+	param.area = $.trim($("#area").val());
+	param.province = $.trim($("#province").val());
+	param.address = $("#address").val();
+	
+	var urlStr = "/user/updateUser";
+	if(manageUser){
+		//修改
+		param.id = manageUser.id
+	}
+	console.log(param);
+	if (!param.address){
+		layer.alert('请填写地址！', {icon: 3}, function(indexNo){
+			layer.closeAll();
+		});
+		return;
+	}
+	if (!param.email|| param.email.indexOf('@')==-1){
+		layer.alert('请填写正确的邮箱！', {icon: 3}, function(indexNo){
+			layer.closeAll();
+		});
+		return;
+	}
+	if (!param.phone || param.phone.length!=11){
+		layer.alert('请填写正确电话！', {icon: 3}, function(indexNo){
+			layer.closeAll();
+		});
+		return;
+	}
+	if (!param.name){
+		layer.alert('请填写姓名！', {icon: 3}, function(indexNo){
+			layer.closeAll();
+		});
+		return;
+	}
+	
+	layer.confirm('确认保存吗？', {icon: 3, title:'提示'}, function(index){
+		$.ajax({
+    		type:"POST",
+    		async:true,  //默认true,异步
+    		data:param,
+    		url:urlStr,
+    		success:function(data){
+    			if(data == "SUCCESS"){
+    				layer.alert('保存成功！', {icon: 1}, function(indexOk){
+    					parent.layer.closeAll();
+       				});
+    			}else{
+    				layer.alert('保存失败！', {icon: 3}, function(indexNo){
+    					parent.layer.closeAll();
+       				});
+    			}
+    	    }
+    	});
+	});
+}
+
+</script>
+</head>
+<body>
+<div  style="margin-left:15px; height: 400px;">
+<div class="first_div" style="border:none;">
+	<div id="adListDiv" align="left" >
+		<table class="form_table" style="border-collapse: collapse;margin-left:20px;margin-top:10px;">
+			<tr>
+				<td align="right" >
+					<span class="need_0">*</span>
+					<span class="text_ad_0">姓名：</span>
+				</td>
+				<td>
+					<input id="name" type="text" name="name" class="input_0"/>
+					<span class="validation_span"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td align="right" >
+					<span class="need_0">*</span>
+					<span class="text_ad_0">联系电话：</span>
+				</td>
+				<td>
+					<input id="phone" type="text" name="phone" class="input_0" />
+					<span class="validation_span"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" >
+					<span class="need_0">*</span>
+					<span class="text_ad_0">省市区：</span>
+				</td>
+				<td>
+					<form class="layui-form layui-form-pane" action="">
+						<div class="layui-inline">
+							<form class="layui-form layui-form-pane" action="javascript:;">
+								<div class="layui-form-item" id="addressDiv">
+									<div class="layui-input-inline">
+										<select name="P1" lay-filter="province" id="province">
+											<option></option>
+										</select>
+									</div>
+									<div class="layui-input-inline">
+										<select name="C1" lay-filter="city" id="city">
+											<option></option>
+										</select>
+									</div>
+									<div class="layui-input-inline">
+										<select name="A1" lay-filter="area" id="area">
+											<option></option>
+										</select>
+									</div>
+								</div>
+							</form>
+						</div>
+					</form>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="right" >
+					<span class="need_0">*</span>
+					<span class="text_ad_0">地址：</span>
+				</td>
+				<td>
+					<input id="address" type="text" name="address" class="input_0" value="" />
+					<span class="validation_span"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" >
+					<span class="text_ad_0">邮箱：</span>
+				</td>
+				<td>
+					<input id="email" type="text" name="email" class="input_0" />
+					<span class="validation_span"></span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="left" >
+					<div style="margin-top:10px;margin-bottom:20px;margin-left:120px;">
+						<input type="button" class="layui-btn" lay-submit="" lay-filter="add" id="saveBtu" onclick="save()" value="保存" style="" />
+						<input type="button" class="layui-btn" lay-submit="" lay-filter="add" id="backBtu" name="backBtu" value="返回" style="margin-left:20px;" />
+					</div>
+				</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>

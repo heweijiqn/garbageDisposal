@@ -1,0 +1,217 @@
+.color_1 {
+    color: #3F85F1;
+    padding-left: 2px;
+  }
+  .color_2 {
+    color: #ec4335;
+    padding-left: 2px;
+  }
+  .color_3 {
+    color: #FCBC27;
+    padding-left: 2px;
+  }
+  .color_4 {
+    color: #2FA858;
+    padding-left: 2px;
+  }
+  .new_label {
+    display: inline-block;
+    padding: 4px 6px;
+    margin: 2px 4px;
+    line-height: 16px;
+    vertical-align: baseline;
+    white-space: nowrap;
+    background-color: #ecf0f1;;
+    color: #404040;
+    text-decoration: none;
+    border: 1px solid #7ba8ce;
+    border-radius: 8px;
+  }
+
+  a:hover,a:focus {
+      color: #0aa284;
+  }
+
+  .panel-body div {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .list_line div {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  h1 {
+    font-size:30px;
+    margin-top: 13px;
+  }
+  
+  
+  ul {
+    padding-inline-start:0px;
+  }
+  ul li {
+    list-style: none;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  ul li a {
+    float: left;
+    color:#333;
+  }
+  ul li span {
+    float: right;
+  }
+
+  .fleft {
+    float: right;
+  }
+
+  .theader {
+    border-bottom-color: rgb(183, 9, 9);
+    border-bottom-color: #cccccc;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0px 6px;
+    margin-bottom: 5px;
+  }
+
+  .city_list a {
+    padding: 4px 6px;
+    margin: 2px 4px;
+    color: black;
+    font-size: initial;
+  }
+
+  .label_title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .z_list_a {
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .flink a {
+    color:#787878;
+    margin-right: 10px;
+  }
+.pydocx-caps {
+    text-transform: uppercase
+}
+
+.pydocx-center {
+    text-align: center
+}
+
+.pydocx-comment {
+    color: blue
+}
+
+.pydocx-delete {
+    color: red;
+    text-decoration: line-through
+}
+
+.pydocx-hidden {
+    visibility: hidden
+}
+
+.pydocx-insert {
+    color: green
+}
+
+.pydocx-left {
+    text-align: left
+}
+
+.pydocx-list-style-type-cardinalText {
+    list-style-type: decimal
+}
+
+.pydocx-list-style-type-decimal {
+    list-style-type: decimal
+}
+
+.pydocx-list-style-type-decimalEnclosedCircle {
+    list-style-type: decimal
+}
+
+.pydocx-list-style-type-decimalEnclosedFullstop {
+    list-style-type: decimal
+}
+
+.pydocx-list-style-type-decimalEnclosedParen {
+    list-style-type: decimal
+}
+
+.pydocx-list-style-type-decimalZero {
+    list-style-type: decimal-leading-zero
+}
+
+.pydocx-list-style-type-lowerLetter {
+    list-style-type: lower-alpha
+}
+
+.pydocx-list-style-type-lowerRoman {
+    list-style-type: lower-roman
+}
+
+.pydocx-list-style-type-none {
+    list-style-type: none
+}
+
+.pydocx-list-style-type-ordinalText {
+    list-style-type: decimal
+}
+
+.pydocx-list-style-type-upperLetter {
+    list-style-type: upper-alpha
+}
+
+.pydocx-list-style-type-upperRoman {
+    list-style-type: upper-roman
+}
+
+.pydocx-right {
+    text-align: right
+}
+
+.pydocx-small-caps {
+    font-variant: small-caps
+}
+
+.pydocx-strike {
+    text-decoration: line-through
+}
+
+.pydocx-tab {
+    display: inline-block;
+    width: 4em
+}
+
+.pydocx-underline {
+    text-decoration: underline
+}
+
+/*
+body {
+    margin: 0px auto;
+    width: 49.61em
+}
+*/
+
+.about_list {
+  max-width: 600px;
+  display:inline-block;
+  text-align: justify;
+}
