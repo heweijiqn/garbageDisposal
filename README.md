@@ -53,45 +53,23 @@ shiro 1.3.2
 
 启动后访问地址：[http://127.0.0.1:8083/](http://127.0.0.1:8083/)
 用户名：**admin**、密码：**123456**
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/1.%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)
+
 
 
 
 ## 3.运行截图
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/2.%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86.png)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/5d49e894-46b6-426d-b07c-03ee9854e0d7)
 
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/3.%E9%A1%B5%E9%9D%A2%E7%AE%A1%E7%90%86.png)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/4e65991b-1ade-4ceb-b7f6-618d0517ffb3)
 
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/4.%E8%A7%92%E8%89%B2%E7%AE%A1%E7%90%86.png)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/13af7991-9bf7-44ca-80f2-a26e1ede4f49)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/3d0edb1c-1c89-4dfe-92fa-89b4386afc56)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/21f7790e-6eec-4b35-83fa-14c8e392f16a)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/60ce21c6-d528-45a5-b1cd-726052a8f39c)
 
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/5.%E6%9F%A5%E8%AF%A2.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/6.%E6%90%9C%E7%B4%A2%E8%AE%B0%E5%BD%95.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/7.%E6%88%91%E7%9A%84%E6%94%B6%E7%9B%8A.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/8.%E8%B4%A1%E7%8C%AE%E7%AE%A1%E7%90%86.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/9.%E9%9A%8F%E6%9C%BA%E6%95%B0%E6%8D%AE.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/10.%E5%9E%83%E5%9C%BE%E7%AE%A1%E7%90%86.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/11.%E5%88%86%E7%B1%BB%E7%AE%A1%E7%90%86.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/12.%E5%9E%83%E5%9C%BE%E7%AE%A1%E7%90%86.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/13.%E5%85%A8%E5%9B%BD%E7%BB%9F%E8%AE%A1.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/14.%E5%88%86%E7%B1%BB%E7%BB%9F%E8%AE%A1.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/15.%E6%8A%95%E6%94%BE%E7%BB%9F%E8%AE%A1.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/16.%E5%85%AC%E5%91%8A%E7%AE%A1%E7%90%86.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/17.%E5%85%AC%E5%91%8A%E5%8F%91%E5%B8%83.png)
-
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/18.%E9%A2%84%E7%BA%A6%E7%AE%A1%E7%90%86.png)
-
-
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/581b97da-1856-4d8e-b92d-9e2d91644f2f)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/19e9989c-1a85-4e7f-b1b7-9867f9b492cb)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/cbf643ca-4d61-4a66-b960-bea8b0c32276)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/27aa879e-244c-4db1-ad7b-4271910f4731)
 
 
