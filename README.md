@@ -1,10 +1,4 @@
-# 垃圾分类查询管理系统
-> 参考网站：[https://lajifenleiapp.com/](https://lajifenleiapp.com/)
-> 
-> 博客教程：[https://blog.csdn.net/WeiHao0240/article/details/127329490](https://blog.csdn.net/WeiHao0240/article/details/127329490)
 
-网络上有很多以本系统进行讲解的博客和教程，\
-请不要商用，并标明出处！\
 
 
 ## 1.介绍
@@ -55,10 +49,6 @@ freemarker 2.3.28\
 mybatis-plus 3.2.0\
 shiro 1.3.2
 
-## 3.安装启动
-源码地址：[https://gitee.com/jack0240/gcms.git](https://gitee.com/jack0240/gcms.git)
-拉取代码之后用IDEA打开，注意修改MySQL用户名密码。
-
 ![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/0.%E5%90%AF%E5%8A%A8.png)
 
 启动后访问地址：[http://127.0.0.1:8083/](http://127.0.0.1:8083/)
@@ -66,12 +56,8 @@ shiro 1.3.2
 ![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/1.%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2.png)
 
 
-参考资料：
 
-[MySQL8.0和5.7安装教程](https://blog.csdn.net/WeiHao0240/article/details/86908034)
-[Java环境配置/JDK安装配置](https://blog.csdn.net/WeiHao0240/article/details/86550186)
-
-## 4.运行截图
+## 3.运行截图
 ![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/2.%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86.png)
 
 ![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/3.%E9%A1%B5%E9%9D%A2%E7%AE%A1%E7%90%86.png)
