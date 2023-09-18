@@ -43,11 +43,11 @@
 
 
 ## 2.软件架构
-JDK 1.8\
-SpringBoot 2.2.6.RELEASE\
-freemarker 2.3.28\
-mybatis-plus 3.2.0\
-shiro 1.3.2
+JDK \
+SpringBoot \
+freemarker \
+mybatis-plus \
+shiro 
 
 
 
