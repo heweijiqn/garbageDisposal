@@ -49,7 +49,7 @@ freemarker 2.3.28\
 mybatis-plus 3.2.0\
 shiro 1.3.2
 
-![输入图片说明](src/main/resources/%E6%88%AA%E5%9B%BE/0.%E5%90%AF%E5%8A%A8.png)
+
 
 启动后访问地址：[http://127.0.0.1:8083/](http://127.0.0.1:8083/)
 用户名：**admin**、密码：**123456**
@@ -72,4 +72,12 @@ shiro 1.3.2
 ![image](https://github.com/heweijiqn/ljfl/assets/95403358/cbf643ca-4d61-4a66-b960-bea8b0c32276)
 ![image](https://github.com/heweijiqn/ljfl/assets/95403358/27aa879e-244c-4db1-ad7b-4271910f4731)
 
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/1eda8eaa-3a71-410f-91ff-eafd017e6617)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/24320134-dbfe-4c79-869b-da54edac78a8)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/e40fcfa0-8433-4952-8145-1ac380117354)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/a575f34d-aaa8-4774-9b1d-83297cd58a46)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/24fa06ee-2793-4b73-97b3-4a52f06bded7)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/fb4e638e-7971-4b29-89b0-966691a40b62)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/c2dfad8a-c063-4ae2-87d3-799368690f21)
+![image](https://github.com/heweijiqn/ljfl/assets/95403358/c8ef51e3-7d7f-41b1-b85c-c6c2fe19d084)
 
